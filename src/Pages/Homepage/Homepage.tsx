@@ -1,6 +1,10 @@
+
+
 const Homepage = () => {
     return (
-        <p>Homepage</p>
+        <article>
+            <></>
+        </article>
     )
 }
 
