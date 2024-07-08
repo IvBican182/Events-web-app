@@ -1,5 +1,7 @@
-import Footer from "./components/pageFooter/Footer"
-import Navbar from "./components/pageNavbar/Navbar"
+import Homepage from "./Pages/Homepage/Homepage";
+import Footer from "./components/pageFooter/Footer";
+import Navbar from "./components/pageNavbar/Navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -7,11 +9,7 @@ function App() {
   return (
     <section className="container">
       <Navbar />
-      <div className="content">
-        <>
-        <p>conetnt</p>
-        </>
-      </div>
+        <Homepage />
       <Footer />
     </section>
     
