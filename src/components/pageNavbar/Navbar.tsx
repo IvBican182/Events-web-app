@@ -1,5 +1,6 @@
 import logo from "../../assets/logo.png";
 import { NavLink } from 'react-router-dom';
+import styles from "./Navbar.module.css";
 
 
 export default function Navbar() {
@@ -14,13 +15,13 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-                <NavLink to ="/" style={{ textDecoration: 'none' }}><a className="nav-link" href="#">HOME <span className="sr-only">(current)</span></a></NavLink>
+                <NavLink to ="/" className={({isActive}) => isActive ? styles.active : styles.default} end><a className="nav-link" href="#">HOME <span className="sr-only">(current)</span></a></NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to ="/events" style={{ textDecoration: 'none' }}><a className="nav-link" href="#">EVENTS</a></NavLink>
+                <NavLink to ="/events" className={({isActive}) => isActive ? styles.active : styles.default}><a className="nav-link" href="#">EVENTS</a></NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to ="/profile" style={{ textDecoration: 'none' }}><a className="nav-link" href="#">PROFILE</a></NavLink>
+                <NavLink to ="/profile" className={({isActive}) => isActive ? styles.active : styles.default}><a className="nav-link" href="#">PROFILE</a></NavLink>
             </li>
             </ul>
             <form className="form-inline my-2 my-lg-0 ml-auto">
