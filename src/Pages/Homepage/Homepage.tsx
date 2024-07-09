@@ -22,7 +22,7 @@ const Homepage = () => {
                             to transform how you enjoy live music.
                         </p>
                     </div>
-                    <button className="event-btn">
+                    <button type="button" className="btn btn-info">
                         Get started
                     </button>
                 </Col>
