@@ -1,6 +1,10 @@
 const EventsPage = () => {
     return (
+        <>
         <p>Events</p>
+        <p>Woohoo</p>
+        </>
+        
     )
 }
 
