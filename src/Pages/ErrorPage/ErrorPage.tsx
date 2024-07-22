@@ -1,7 +1,7 @@
 import Navbar from "../../components/pageNavbar/Navbar";
 import styles from "./ErrorPage.module.css"
 
-const ErrorPage = () => {
+export default function ErrorPage() {
     return (
         <>
         <Navbar />
@@ -13,4 +13,3 @@ const ErrorPage = () => {
     )
 }
 
-export default ErrorPage;

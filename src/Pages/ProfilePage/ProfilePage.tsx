@@ -1,7 +1,6 @@
-const ProfilePage = () => {
+export default function ProfilePage() {
     return (
         <p>my Profile</p>
     )
 }
 
-export default ProfilePage;

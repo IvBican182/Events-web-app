@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const Homepage = () => {
+export default function Homepage() {
     return (
         <Container className={styles.article_container}>
             <Row className={`${styles.row}` + "justify-content-center w-100"}>
@@ -30,5 +30,3 @@ const Homepage = () => {
         </Container>
     )
 }
-
-export default Homepage;
