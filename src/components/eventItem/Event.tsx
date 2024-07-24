@@ -1,7 +1,27 @@
+import { addEvent , removeEvent} from "../../Redux/eventCartSlice";
 import eventStyles from "./Event.module.css";
+import { useAppDispatch } from "../../Redux/index";
+import Button from "../button/Button";
 
 
-export default function EventItem ({ event}: any) {
+
+
+
+export default function EventItem ({ event }: {event: any}) {
+   const dispatch = useAppDispatch();
+
+    function handleSubmit () {
+        console.log({event})
+        dispatch(addEvent(event));
+    }
+
+    function handleRemoveEvent() {
+        dispatch(removeEvent(event.id))
+
+    }
+
+
+    
     return (
             <li className="event-item">
                 <article className={eventStyles.card}>
@@ -22,8 +42,8 @@ export default function EventItem ({ event}: any) {
                             ) : <p>no price shown</p>} 
                     </div>
                     <p className="shop-item-actions">
-                        <button>VISIT PAGE</button>
-                        <button>GOING</button>
+                        <button onClick={() => window.open(event.url)}>VISIT PAGE</button>
+                        <Button text={event.going ? "REMOVE" : "ADD"} actions = {event.going ? handleRemoveEvent : handleSubmit}/>
                     </p>
                 </article>
 

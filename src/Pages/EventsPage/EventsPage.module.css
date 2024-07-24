@@ -1,3 +1,27 @@
-.card {
-    list-style-type: none;
+.row {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
 }
+
+.eventContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+ .card {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100% !important;
+    border: solid orange;
+    border-radius:10px;
+    margin: auto;
+    flex: 1 0 auto;
+    
+} 

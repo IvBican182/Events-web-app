@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import EventItem from "../../components/eventItem/Event";
-//import eventStyle from "./EventsPage.module.css";
+import eventStyle from "./EventsPage.module.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -34,11 +34,11 @@ export default function EventsPage () {
 
 
     return (
-        <div className="events">
-            <Container>
-                <Row>
+        <div className="container">
+            <Container className={eventStyle.eventContainer}>
+                <Row className={eventStyle.row}>
                     {loadedData.map((event : any) => 
-                         <Col xs="4"><EventItem key={event.id} event={event}/></Col>
+                         <Col key={event.id} md="4" className={eventStyle.card}><EventItem event={event}/></Col>
                     )}
                 </Row>
             </Container>
