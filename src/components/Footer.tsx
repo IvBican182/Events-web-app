@@ -1,4 +1,4 @@
-import git_logo from "../../assets/git-logo.png";
+import git_logo from "../assets/git-logo.png";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
