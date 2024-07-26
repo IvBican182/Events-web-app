@@ -1,6 +1,6 @@
 //import Homepage from "./Pages/Homepage/Homepage";
-import Footer from "./components/pageFooter/Footer";
-import Navbar from "./components/pageNavbar/Navbar";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import { Outlet } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 

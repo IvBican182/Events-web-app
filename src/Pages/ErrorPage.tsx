@@ -1,4 +1,4 @@
-import Navbar from "../../components/pageNavbar/Navbar";
+import Navbar from "../components/Navbar";
 import styles from "./ErrorPage.module.css"
 
 export default function ErrorPage() {

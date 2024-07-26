@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import EventItem from "../../components/eventItem/Event";
+import EventItem from "../components/Event";
 import eventStyle from "./EventsPage.module.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

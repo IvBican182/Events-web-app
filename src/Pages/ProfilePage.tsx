@@ -1,6 +1,6 @@
-import { useAppSelector } from "../../Redux/index";
+import { useAppSelector } from "../Redux/index";
 import { Container, Row, Col } from "react-bootstrap";
-import EventItem from "../../components/eventItem/Event";
+import EventItem from "../components/Event";
 
 
 

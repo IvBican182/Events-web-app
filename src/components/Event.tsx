@@ -1,7 +1,7 @@
-import { addEvent , removeEvent} from "../../Redux/eventCartSlice";
+import { addEvent , removeEvent} from "../Redux/eventCartSlice";
 import eventStyles from "./Event.module.css";
-import { useAppDispatch } from "../../Redux/index";
-import Button from "../button/Button";
+import { useAppDispatch } from "../Redux/index";
+import Button from "./Button";
 import { useState } from "react";
 
 
