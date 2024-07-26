@@ -2,6 +2,9 @@ import { addEvent , removeEvent} from "../../Redux/eventCartSlice";
 import eventStyles from "./Event.module.css";
 import { useAppDispatch } from "../../Redux/index";
 import Button from "../button/Button";
+import { useState } from "react";
+
+
 
 
 
@@ -9,16 +12,25 @@ import Button from "../button/Button";
 
 export default function EventItem ({ event }: {event: any}) {
    const dispatch = useAppDispatch();
+   const [isGoing, setIsGoing] = useState(false);
 
     function handleSubmit () {
         console.log({event})
-        dispatch(addEvent(event));
+        dispatch(addEvent(event));  
+        setIsGoing(true)
+           
+    
     }
 
     function handleRemoveEvent() {
         dispatch(removeEvent(event.id))
+        setIsGoing(false)
+        
+       
 
     }
+
+
 
 
     
@@ -43,7 +55,7 @@ export default function EventItem ({ event }: {event: any}) {
                     </div>
                     <p className="shop-item-actions">
                         <button onClick={() => window.open(event.url)}>VISIT PAGE</button>
-                        <Button text={event.going ? "REMOVE" : "ADD"} actions = {event.going ? handleRemoveEvent : handleSubmit}/>
+                        <Button text={event.isGoing || isGoing ? "REMOVE" : "ADD"} actions = {event.isGoing || isGoing ? handleRemoveEvent : handleSubmit}/>
                     </p>
                 </article>
 

@@ -4,8 +4,9 @@ import EventItem from "../../components/eventItem/Event";
 
 
 
+
 export default function ProfilePage() {
-    const events = useAppSelector(state=>state.eventCart.events)
+    const events = useAppSelector(state => state.eventCart.events)
 
     return (
         <>

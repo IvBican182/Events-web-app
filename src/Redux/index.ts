@@ -3,9 +3,12 @@ import eventCartSlice from "../../src/Redux/eventCartSlice";
 import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
 
 
+
 export const store = configureStore({
     reducer: { 
         eventCart: eventCartSlice.reducer,
+        
+
      }
 });
 
