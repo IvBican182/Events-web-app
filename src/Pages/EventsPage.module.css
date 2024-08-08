@@ -1,8 +1,9 @@
 .row {
     display: flex;
-    width: 90%;
+    width: 80%;
     justify-content: center;
     margin: auto;
+    gap: 0px;
 }
 
 .eventContainer {
@@ -18,7 +19,6 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    height: 100% !important;
     border: solid orange;
     border-radius:10px;
     margin: auto;

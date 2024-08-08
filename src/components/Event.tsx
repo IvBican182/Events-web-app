@@ -35,15 +35,17 @@ export default function EventItem ({ event }: {event: any}) {
 
     
     return (
-            <li className="event-item">
-                <article className={eventStyles.card}>
-                    <div className={eventStyles.card}>
-                        <h2>{event.name}</h2>
+    
+            <li className={event.isGoing || isGoing ? eventStyles.isGoing : eventStyles.eventItem}>
+                <div className={eventStyles.cardContent}>
+                    <div className={eventStyles.cardMain}>
+                        <h2 className={eventStyles.title}>{event.name}</h2>
                         {event.images.map((img: any) => {
                             if(img.ratio == "4_3") {
-                                return <img key={img.url} src={img.url}></img>
+                                return <img className={eventStyles.image} key={img.url} src={img.url}></img>
                             }
                         })}
+                        
                         {event.classifications.map((classification: any) => (
                             <p key={classification.genre.id}>Type : {classification.segment.name}/{classification.genre.name}/{classification.subGenre.name}</p>
                         ))}
@@ -53,13 +55,13 @@ export default function EventItem ({ event }: {event: any}) {
                             <p key={prices.min}>Price range - from {prices.min}{prices.currency} to {prices.max}{prices.currency}</p>)
                             ) : <p>no price shown</p>} 
                     </div>
-                    <p className="shop-item-actions">
+                    <p className={eventStyles.eventActions}>
                         <button onClick={() => window.open(event.url)}>VISIT PAGE</button>
                         <Button text={event.isGoing || isGoing ? "REMOVE" : "ADD"} actions = {event.isGoing || isGoing ? handleRemoveEvent : handleSubmit}/>
                     </p>
-                </article>
-
+                </div>               
             </li>
+        
     )
 
 }
