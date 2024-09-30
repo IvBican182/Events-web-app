@@ -2,6 +2,12 @@
 Web app that shows popular events, it uses TicketMaster API for fetching events. You can select events you want to attend, they will show
 up in your profile page. 
 
+* showcase images
+
+<img src="./assets/events2.PNG" alt="homepage"/>
+
+<img src="./assets/events1.PNG" alt="events page"/>
+
 
 ## Requirements
 
