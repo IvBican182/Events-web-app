@@ -15,13 +15,13 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-                <NavLink to ="/" className={({isActive}) => isActive ? styles.active : styles.default} end>HOME</NavLink>
+                <NavLink to ="/" className="nav-link"><span className={styles.latoBold}>HOME</span></NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to ="/events" className={({isActive}) => isActive ? styles.active : styles.default}>EVENTS</NavLink>
+                <NavLink to="/events" className="nav-link"><span className={styles.latoBold}>EVENTS</span></NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to ="/profile" className={({isActive}) => isActive ? styles.active : styles.default}>PROFILE</NavLink>
+                <NavLink to="/profile" className="nav-link"><span className={styles.latoBold}>PROFILE</span></NavLink>
             </li>
             </ul>
             <form className="form-inline my-2 my-lg-0 ml-auto">
